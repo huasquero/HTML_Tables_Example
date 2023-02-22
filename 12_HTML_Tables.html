@@ -1,0 +1,206 @@
+<!--W3 Schools 'HTML Tables' until --> 
+
+<!DOCTYPE html>
+<!--
+	HTML tables allow web developers to arrange data into rows and columns. 
+	Define an HTML Table
+	A table in HTML consists of table cells inside rows and columns.
+	Table Cells
+	Each table cell is defined by a <td> and a </td> tag.
+
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>12_html_tables</title>
+
+	<!--
+		When you add a border to a table, you also add borders around each table cell:
+		To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.
+		This will make the borders collapse into a single border.
+
+		If you set a background color of each cell, and give the border a white color (the same as the document background), you get the impression of an invisible border:
+
+		Collapsed Table Borders
+		To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.
+		This will make the borders collapse into a single border: 
+		
+	-->
+	<style>
+		table{
+			border: 2.5px dashed black;
+			border-color: rgba(2,0,0,1);
+		
+		}
+
+		th, td {
+			border: 1px solid white;
+			border-collapse: collapse;
+			background-color: #96D4D4;
+			border-radius: 10px; 
+		}
+		h1 {
+			text-decoration: underline;
+		}
+
+		/*th, td {
+			border-radius: 10px;
+		}*/
+		
+	</style>
+</head>
+<body style="background-color: lightslategray;">
+	<h1 style="text-decoration: unset;">Table of content</h1>
+	<ul>
+		<li><a href="#Table">Table</a></li>
+		<li><a href="#Table_Border">Table Border</a></li>
+		<li><a href="#Table_Width">Table width</a></li>
+		<li><a href="#Column_Width">Column width</a></li>
+		<li><a href="#Row_Height">HTML Table Row Height</a></li>
+		<li><a href="#HTML_Table_Headers">HTML Table Headers</a></li>
+	</ul>
+	<hr style="border: 2px solid black;">
+
+	<p><h1 id="Table">Table</h1>
+	<h2>Below you see a table</h2>
+	<table>
+		<tr>
+			<th>Row 1</th> <!--Table Headers
+							Sometimes you want your cells to be table header cells. In those cases use the <th> tag instead of the <td> tag: 
+							By default, the text in <th> elements are bold and centered, but you can change that with CSS.
+							-->
+			<th>Row 2</th>
+			<th>Row 3</th>
+		</tr>
+		<tr><!--Each table row starts with a <tr> and ends with a </tr> tag.-->
+			<td>This is one cell in row 1</td> <!--Each table cell is defined by a <td> and a </td> tag. td stand for table data Note: A table cell can contain all sorts of HTML elements: text, images, lists, links, other tables, etc. -->
+			<td>This is one cell in row 2</td>
+			<td>This is one cell in row 3</td>
+		</tr>		
+		<tr>
+			<td>This is one cell in row 1</td>
+			<td>This is one cell in row 2</td>
+			<td>This is one cell in row 3</td>
+		</tr>
+	</table>
+	</p>
+	<hr style="border: 2px solid black;">
+
+		<p><h1 id="Table_Border">Table border</h1>
+			<h2>In the following Table I changed the border <u>'style'</u> from dotted (like the one above) to solid using inline <u>'style'</u> sheet</h2>
+		<table style="border: 2.5px solid black;">
+		  <tr>
+		    <td>Emil</td>
+		    <td>Tobias</td>
+		    <td>Linus</td>
+		  </tr>
+		  <tr>
+		    <td>16</td>
+		    <td>14</td>
+		    <td>10</td>
+		  </tr>
+		</table>
+		</p>
+		<hr style="border: 2px solid black;">
+
+
+		<!-- 
+		HTML tables can have different sizes for each column, row or the entire table.
+ 		Use the style attribute with the width or height properties to specify the size of a table, row or column.
+ 		-->
+
+ 		<p><h1 id="Table_Width">Table Width</h1>
+ 		<h2>In the following Table I changed the table width by using the <u>'style'</u> attribute.</h2>
+
+ 		<table style="width:50%">
+ 			<tr>
+	 			<th>Country</th>
+	 			<th>Population</th>
+	 			<th>Square Km</th>
+ 			</tr>
+ 			<tr>
+ 				<td>Switzerland</td>
+ 				<td>8'703'000</td>
+ 				<td>41’285</td>
+ 			</tr>
+ 			<tr>
+ 				<td>Germany</td>
+ 				<td>83'200'000</td>
+ 				<td>357'588</td>
+ 			</tr>
+ 			<tr>
+ 				<td>Austria</td>
+ 				<td>8'956'000</td>
+ 				<td>83’871</td>
+ 			</tr>
+ 		</table>
+ 		</p>
+		<hr style="border: 2px solid black;">
+
+
+ 		<p><h1 id="Column_Width">Column width</h1>
+ 			<h2>In the following Table I changed the column width by using the <u>'style'</u> attribute on the <u>'th'</u> element.</h2>
+
+ 		<table>
+ 			<tr>
+	 			<th style="width:50%">Animal</th>
+	 			<th style="width:50%">Amount of Legs</th>
+	 		</tr>
+		 		<td>Tiger</td>
+		 		<td>4</td>
+		 	<tr>
+		 		<td>Pigeon</td>
+		 		<td>2</td>
+		 	</tr> 
+		</table>
+		</p>
+
+		<p><h2>In the following Table I changed the column width by using the <u>'style'</u> attribute on the <u>'td'</u> element.</h2>
+ 		<table>
+ 			<tr>
+	 			<th>Animal</th>
+	 			<th>Amount of Legs</th>
+	 		</tr>
+		 		<td style="width:50%">Tiger</td>
+		 		<td style="width:50%">4</td>
+		 	<tr>
+		 		<td style="width:50%">Pigeon</td>
+		 		<td style="width:50%">2</td>
+		 	</tr>
+ 		</table>
+ 		</p>
+
+
+
+		 <h2><p>As you can see, one can either change the column width by using the <u>'style'</u> attribute on an <u>'th'</u> or <u>'td'</u>element.</p></h2>
+		<hr style="border: 2px solid black;">
+
+		<p><h1 id="Row_Height">Row Height</h1>
+			<h2>Here i changed the height of one row by using the <u>'style'</u> attribute on the <u>'tr'</u> element.</h2>
+			<table style="width:300px;">
+				<tr style="height: 50px;">
+					<th>Programming Language</th>
+					<th>Where it is used</th>
+				</tr>
+				<tr style="height: 50px;">
+					<td>HTML</td>
+					<td>Web Development</td>
+				</tr>
+				<tr style="height: 50px;">
+					<td>CSS</td>
+					<td>Web Development</td>
+				</tr>
+				<tr style="height: 50px;">
+					<td>Javascript</td>
+					<td>Web Development</td>
+				</tr>
+			</table>
+		<p><h1 id="HTML_Table_Headers">HTML Table Headers</h1>
+
+
+
+
+
+</body>
+</html>
