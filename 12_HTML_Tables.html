@@ -1,0 +1,404 @@
+<!--W3 Schools 'HTML Tables' until --> 
+
+<!DOCTYPE html>
+<!--
+	HTML tables allow web developers to arrange data into rows and columns. 
+	Define an HTML Table
+	A table in HTML consists of table cells inside rows and columns.
+	Table Cells
+	Each table cell is defined by a <td> and a </td> tag.
+
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>12_html_tables</title>
+
+	<!--
+		When you add a border to a table, you also add borders around each table cell:
+		To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.
+		This will make the borders collapse into a single border.
+
+		If you set a background color of each cell, and give the border a white color (the same as the document background), you get the impression of an invisible border:
+
+		Collapsed Table Borders
+		To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.
+		This will make the borders collapse into a single border: 
+		
+	-->
+	<style>
+		table{
+			border: 2.5px dashed;
+			border-color: rgba(100,0,0,1);
+		
+		}
+
+		th, td {
+			border: 1px solid white;
+			border-collapse: collapse;
+			background-color: #96D4D4;
+			border-radius: 10px; 
+		}
+		h1 {
+			text-decoration: underline;
+		}
+
+		/*th, td {
+			border-radius: 10px;
+		}*/
+		
+	</style>
+	<link rel="icon" type="images/x-icon" href="images/favicon.ico"> <!-- So this line of code makes sure that a favicon can be displayed.-->
+</head>
+<body style="background-color: lightslategray;">
+	<h1 style="text-decoration: unset;">Table of content</h1>
+	<ul>
+		<li><a href="#Table">Table</a></li>
+		<li><a href="#Table_Border">HTML Table Border</a></li>
+		<li><a href="#Table_Width">HTML Table width</a></li>
+		<li><a href="#Column_Width">HTML Column width</a></li>
+		<li><a href="#Row_Height">HTML Table Row Height</a></li>
+		<li><a href="#Table_Headers">HTML Table Headers</a></li>
+		<li><a href="#Table_Styling">HTML Table Styling</a></li>
+	</ul>
+	<hr style="border: 2px solid black;">
+
+	<p><h1 id="Table">Table</h1>
+	<h2>Below you see a table</h2>
+	<table>
+		<tr>
+			<th>Row 1</th> <!--Table Headers
+							Sometimes you want your cells to be table header cells. In those cases use the <th> tag instead of the <td> tag: 
+							By default, the text in <th> elements are bold and centered, but you can change that with CSS.
+							-->
+			<th>Row 2</th>
+			<th>Row 3</th>
+		</tr>
+		<tr><!--Each table row starts with a <tr> and ends with a </tr> tag.-->
+			<td>This is one cell in row 1</td> <!--Each table cell is defined by a <td> and a </td> tag. td stand for table data Note: A table cell can contain all sorts of HTML elements: text, images, lists, links, other tables, etc. -->
+			<td>This is one cell in row 2</td>
+			<td>This is one cell in row 3</td>
+		</tr>		
+		<tr>
+			<td>This is one cell in row 1</td>
+			<td>This is one cell in row 2</td>
+			<td>This is one cell in row 3</td>
+		</tr>
+	</table>
+	</p>
+	<hr style="border: 2px solid black;">
+
+		<p><h1 id="Table_Border">Table border</h1>
+			<h2>In the following Table I changed the border <u>'style'</u> from dotted (like the one above) to solid using inline <u>'style'</u> sheet</h2>
+		<table style="border: 2.5px solid black;">
+		  <tr>
+		    <td>Emil</td>
+		    <td>Tobias</td>
+		    <td>Linus</td>
+		  </tr>
+		  <tr>
+		    <td>16</td>
+		    <td>14</td>
+		    <td>10</td>
+		  </tr>
+		</table>
+		</p>
+		<hr style="border: 2px solid black;">
+
+
+		<!-- 
+		HTML tables can have different sizes for each column, row or the entire table.
+ 		Use the style attribute with the width or height properties to specify the size of a table, row or column.
+ 		-->
+
+ 		<p><h1 id="Table_Width">Table Width</h1>
+ 		<h2>In the following Table I changed the table width by using the <u>'style'</u> attribute.</h2>
+
+ 		<table style="width:50%">
+ 			<tr>
+	 			<th>Country</th>
+	 			<th>Population</th>
+	 			<th>Square Km</th>
+ 			</tr>
+ 			<tr>
+ 				<td>Switzerland</td>
+ 				<td>8'703'000</td>
+ 				<td>41’285</td>
+ 			</tr>
+ 			<tr>
+ 				<td>Germany</td>
+ 				<td>83'200'000</td>
+ 				<td>357'588</td>
+ 			</tr>
+ 			<tr>
+ 				<td>Austria</td>
+ 				<td>8'956'000</td>
+ 				<td>83’871</td>
+ 			</tr>
+ 		</table>
+ 		</p>
+		<hr style="border: 2px solid black;">
+
+
+ 		<p><h1 id="Column_Width">Column width</h1>
+ 			<h2>In the following Table I changed the column width by using the <u>'style'</u> attribute on the <u>'th'</u> element.</h2>
+
+ 		<table>
+ 			<tr>
+	 			<th style="width:50%">Animal</th>
+	 			<th style="width:50%">Amount of Legs</th>
+	 		</tr>
+		 		<td>Tiger</td>
+		 		<td>4</td>
+		 	<tr>
+		 		<td>Pigeon</td>
+		 		<td>2</td>
+		 	</tr> 
+		</table>
+		</p>
+
+		<p><h2>In the following Table I changed the column width by using the <u>'style'</u> attribute on the <u>'td'</u> element.</h2>
+ 		<table>
+ 			<tr>
+	 			<th>Animal</th>
+	 			<th>Amount of Legs</th>
+	 		</tr>
+		 		<td style="width:50%">Tiger</td>
+		 		<td style="width:50%">4</td>
+		 	<tr>
+		 		<td style="width:50%">Pigeon</td>
+		 		<td style="width:50%">2</td>
+		 	</tr>
+ 		</table>
+ 		</p>
+
+
+
+		 <h2><p>As you can see, one can either change the column width by using the <u>'style'</u> attribute on an <u>'th'</u> or <u>'td'</u>element.</p></h2>
+		<hr style="border: 2px solid black;">
+
+		<p><h1 id="Row_Height">Row Height</h1>
+			<h2>Here i changed the height of one row by using the <u>'style'</u> attribute on the <u>'tr'</u> element.</h2>
+			<table style="width:300px;">
+				<tr style="height: 50px;">
+					<th>Programming Language</th>
+					<th>Where it is used</th>
+				</tr>
+				<tr style="height: 50px;">
+					<td>HTML</td>
+					<td>Web Development</td>
+				</tr>
+				<tr style="height: 50px;">
+					<td>CSS</td>
+					<td>Web Development</td>
+				</tr>
+				<tr style="height: 50px;">
+					<td>Javascript</td>
+					<td>Web Development</td>
+				</tr>
+			</table>
+		<hr style="border: 2px solid black;">
+
+		<p><h1 id="Table_Headers">Table Headers</h1>
+			<!--
+			HTML tables can have headers for each column or row, or for many columns/rows.
+			So in the previous examples the table headers were in the first row (from left to right). 
+			To use the first column as table headers, define the first cell in each row as a <th> element:
+			-->
+			<h2>So in the previous examples the table headers were in the first row (yellow background).</h2>
+			<table>
+				<tr>
+					<th style="background-color:yellow;">Programming Language</th>
+					<th style="background-color:yellow;">Where it is used</th>
+				</tr>
+				<tr style="height: 50px;">
+					<td>HTML</td>
+					<td>Web Development</td>
+				</tr>
+				<tr style="height: 50px;">
+					<td>CSS</td>
+					<td>Web Development</td>
+				</tr>
+				<tr style="height: 50px;">
+					<td>Javascript</td>
+					<td>Web Development</td>
+				</tr>
+			</table>
+
+			<h2>To use the first column as table headers, define the first cell in each row as a <u>'th'</u> element:
+				<table>
+					<tr style="height: 50px;">
+						<th style="background-color:yellow;">Programming Language</th>
+						<td>HTML</td>
+						<td>HTML</td>
+						<td>Javascript</td>
+					</tr>
+					<tr style="height: 50px;">
+						<th style="background-color:yellow;">Where it is used</th>
+						<td>Web Development</td>
+						<td>Web Development</td>
+						<td>Web Development</td>
+					</tr>
+				</table>
+			<h2>Align Table Headers</h2>
+			<p>By default, table headers are bold and centered:</p>
+				<table>
+				  <tr>
+				    <th style="width: 20%;">Firstname</th>
+				    <th style="width: 20%;">Lastname</th>
+				    <th style="width: 20%;">Age</th>
+				  </tr>
+				  <tr>
+				    <td>Jill</td>
+				    <td>Smith</td>
+				    <td>50</td>
+				  </tr>
+				  <tr>
+				    <td>Eve</td>
+				    <td>Jackson</td>
+				    <td>94</td>
+				  </tr>
+				</table>
+			<p>To left-align the table headers, use the CSS text-align property:</p>
+				<table style="text-align:left;">
+				  <tr>
+				    <th style="width: 20%;">Firstname</th>
+				    <th style="width: 20%;">Lastname</th>
+				    <th style="width: 20%;">Age</th>
+				  </tr>
+				  <tr>
+				    <td>Jill</td>
+				    <td>Smith</td>
+				    <td>50</td>
+				  </tr>
+				  <tr>
+				    <td>Eve</td>
+				    <td>Jackson</td>
+				    <td>94</td>
+				  </tr>
+				</table>
+
+				<h2>Header for Multiple Columns</h2>
+				<p>You can have a header that spans over two or more columns.<br>
+				To do this, use the <u>'colspan'</u> attribute on the <th> element:</p>
+				<table>
+					<tr>
+						<th colspan="2">Name</th>
+						<th>Age</th>
+					</tr>
+					<tr>
+						<td>Jill</td>
+						<td>Smith</td>
+						<td>50</td>
+					</tr>
+					<tr>
+						<td>Eve</td>
+						<td>Jackson</td>
+						<td>94</td>
+					</tr>
+				</table>
+
+				<h2>Table Caption</h2>
+				<p>You can add a caption that serves as a heading for the entire table.</p>
+				<table>
+					<caption><strong><i>Name and Age</i></strong></caption> <!--Note: The <caption> tag should be inserted immediately after the <table> tag.-->
+					<tr>
+						<th colspan="2">Name</th>
+						<th>Age</th>
+					</tr>
+					<tr>
+						<td>Jill</td>
+						<td>Smith</td>
+						<td>50</td>
+					</tr>
+					<tr>
+						<td>Eve</td>
+						<td>Jackson</td>
+						<td>94</td>
+					</tr>
+				</table>
+				<h2>HTML Table Padding & Spacing</h2>
+				<p>HTML tables can adjust the padding inside the cells, and also the space between the cells.<br>
+				Cell padding is the space between the cell edges and the cell content.<br>
+				By default the padding is set to 0.<br>
+				To add padding on table cells, use the CSS padding property:</p>
+
+				<table>
+					<tr>
+						<th style="padding: 15px">Hello</th>
+						<th style="padding: 15px">Hello</th>
+						<th style="padding: 15px">Hello</th>
+					</tr>
+					<tr>
+						<td style="padding: 15px">This is a cell</td>
+						<td style="padding: 15px">This is a cell</td>
+						<td style="padding: 15px">This is a cell</td>
+					</tr>
+				</table>
+				<p>To add padding only above the content, use the padding-top property.<br>
+				And the others sides with the padding-bottom, padding-left, and padding-right properties:<br>
+				<table>
+					<tr>
+						<th style="padding-top:10px">Hello</th>
+						<th>Hello</th>
+						<th>Hello</th>
+					</tr>
+					<tr>
+						<td style="padding-top:10px">This is a cell</td>
+						<td>This is a cell</td>
+						<td>This is a cell</td>
+					</tr>
+				</table>
+				<p>Here is an example where we changed the border-spacing bettween the cells:</p>
+				<table style="border-spacing: 30px;">
+					<tr>
+						<th>Hello</th>
+						<th>Hello</th>
+						<th>Hello</th>
+					</tr>
+					<tr>
+						<td>This is a cell</td>
+						<td>This is a cell</td>
+						<td>This is a cell</td>
+					</tr>
+				</table>
+
+				<h2>HTML Table Colspan & Rowspan</h2>
+				<p>HTML tables can have cells that span over multiple rows and/or columns.<br>
+				HTML Table - ColspanTo make a cell span over multiple columns, use the colspan attribute:</p>
+				<table>
+					<tr>
+						<td colspan="3">This is one big cell the spans over 3 columns.</td>
+					</tr>
+					<tr>
+						<td>Hello</td>
+						<td>Hello</td>
+						<td>Hello</td>
+					</tr>
+				</table>
+				<p>Note: The value of the colspan attribute represents the number of columns to span.</p>
+
+				<h2>HTML Table - Rowspan</h2>
+				<p>To make a cell span over multiple rows, use the rowspan attribute:</p>
+				<table>
+					<tr>
+						<th>HI</th>
+						<td rowspan="3">This is one big cell the spans over 3 rows</td>
+					</tr>
+					<tr>
+						<td>Some cell</td>
+					</tr>
+					<tr>
+						<td>Some cell</td>
+					</tr>
+				</table>
+				<p>Note: The value of the rowspan attribute represents the number of rows to span.</p>
+
+				<h1 id="Table_Styling">HTML Table Styling</h1>
+				<p>The Table Styling lesson can be looked at if you <a href="C:\Users\buent\Documents\Dokumente HP Computer\Coding\Webdevelopment\12-HTML_Tables\13_HTML_Tables.html" target="_blank">click here</a></p>
+
+
+
+</body>
+</html>
